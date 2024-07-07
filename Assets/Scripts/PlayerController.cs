@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
     void Jump() {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Force);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
         }
     }
